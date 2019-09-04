@@ -1,0 +1,17 @@
+#app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: $sidebar-md-width + 40px;
+  z-index: 20;
+
+  .contacts-list {
+    padding-top: 25px;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      display: flex;
+    }
+  }
+}

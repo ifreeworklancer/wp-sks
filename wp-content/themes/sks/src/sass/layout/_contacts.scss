@@ -1,0 +1,64 @@
+#contacts {
+  padding: 30px 0;
+  z-index: 10;
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 0;
+  }
+
+  .contacts-wrapper {
+    position: relative;
+    padding: 90px 0 0 30px;
+    z-index: 40;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 300px 300px 0 0;
+      border-color: rgba($dark, .8) transparent transparent transparent;
+      z-index: -2;
+    }
+  }
+
+  .contacts-logo {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    svg {
+      fill: $dark;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        margin-right: -40px;
+      }
+    }
+  }
+
+  .map-contacts {
+    position: relative;
+    height: 200px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      height: 300px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: auto;
+    }
+  }
+
+  #contacts-map {
+    @extend %pos;
+    z-index: 2;
+  }
+}

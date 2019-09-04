@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:400,700&display=swap');
+
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap" ,"~flickity/dist/flickity.min.css";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+@import "base/page";
+@import "base/article";
+
+@import "modules/forms";
+@import "modules/modal";
+@import "modules/slider";
+@import "modules/breadcrumb";
+@import "modules/video";
+
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/intro";
+@import "layout/about";
+@import "layout/advantages";
+@import "layout/project";
+@import "layout/packages";
+@import "layout/reviews";
+@import "layout/contacts";
+@import "layout/footer";

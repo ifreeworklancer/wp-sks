@@ -1,0 +1,132 @@
+#project {
+  padding: 40px 0 100px;
+
+  .project-slider {
+
+    &-item {
+      width: 100%;
+      padding: 0 4px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 50%;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, xxl)) {
+        width: 33.333%;
+      }
+
+      .project-card {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.project-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #161616;
+  min-height: 280px;
+  padding-bottom: 70%;
+  margin: 4px 0;
+  z-index: 10;
+
+  .decor-hover {
+    @extend %pos;
+    background: rgba(22, 22, 22, 0.9);
+    opacity: 0;
+    transition: .5s;
+    z-index: -2;
+  }
+
+  .count {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.25rem;
+    color: #494949;
+    font-weight: bold;
+    transition: .5s;
+    z-index: 15;
+  }
+
+  .image {
+    @extend %pos;
+    @extend %img;
+    left: 65px;
+    z-index: -5;
+    transition: .5s;
+
+    &::before {
+      content: '';
+      @extend %pos;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0.23%, rgba(0, 0, 0, 0) 43.5%);
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    z-index: 10;
+
+    .hover-title {
+      position: absolute;
+      bottom: 20px;
+      font-family: $headings-font-family;
+      font-size: 1.25rem;
+      transition: .5s;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: $h4-font-size;
+      }
+    }
+
+    .description {
+      position: absolute;
+      width: 100%;
+      bottom: -100%;
+      padding: 10px 0 20px;
+      transition: .5s;
+
+      .title {
+        margin-bottom: 0;
+        font-size: 1.25rem;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          font-size: $h4-font-size;
+        }
+      }
+    }
+  }
+
+  &:hover {
+
+    .decor-hover {
+      opacity: 1;
+    }
+
+    .count {
+      color: $primary;
+    }
+
+    .image {
+      left: 0;
+    }
+
+    .content {
+
+      .hover-title {
+        bottom: -100%;
+      }
+
+      .description {
+        bottom: 0;
+      }
+    }
+  }
+}

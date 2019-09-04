@@ -1,0 +1,105 @@
+#reviews {
+  padding: 20px 0 150px;
+  @extend %img;
+
+  &::before,
+  &::after {
+    content: '';
+    @extend %pos;
+    z-index: -2;
+  }
+
+  &::before {
+    background: rgba(14, 14, 14, 0.9);
+  }
+
+  &::after {
+    background: linear-gradient(180deg, #0E0E0E 0%, rgba(14, 14, 14, 0) 100%);
+  }
+
+  .reviews-slider {
+
+    &-item {
+      padding: 50px 20px;
+      width: 100%;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        padding: 50px 20px;
+        width: 50%;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, xxl)) {
+        padding: 50px 30px;
+        width: 33.333%;
+      }
+    }
+  }
+}
+
+.reviews-item {
+  position: relative;
+  padding: 40px 30px 50px;
+  background: $body-bg;
+
+
+  &-header {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent $primary transparent;
+    transition: .5s;
+  }
+
+  .image {
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    margin-top: -90px;
+
+    figure {
+      width: 100px;
+      height: 100px;
+      @extend %img;
+      border-radius: 50%;
+    }
+  }
+
+  .decor-block {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: -50px;
+      fill: $primary;
+    }
+
+    .line {
+      width: 100%;
+      height: 2px;
+      background: $secondary;
+      margin-left: 15px;
+    }
+  }
+
+  .description {
+    margin-bottom: 60px;
+  }
+
+  .name {
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+    color: $primary;
+    font-family: $headings-font-family;
+  }
+}

@@ -1,0 +1,167 @@
+.contacts-list {
+
+  &--row {
+    display: flex;
+
+    li {
+      margin-right: 30px;
+      margin-bottom: 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-item {
+    margin-bottom: 25px;
+
+    &__title {
+      font-size: .75rem;
+      color: $primary;
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: .875rem;
+
+      svg {
+        fill: #fff;
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  font-size: .75rem;
+  line-height: 1;
+
+  &__text {
+    color: $light;
+    margin-right: 10px;
+  }
+
+  &__value {
+    color: $primary;
+
+    span {
+      font-size: 1.5rem;
+      line-height: .1;
+    }
+  }
+}
+
+.link-more {
+  position: relative;
+  display: inline-block;
+  padding-right: 40px;
+  font-size: 1.125rem;
+  line-height: 1;
+  color: $primary;
+  transition: .5s;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding-right: 50px;
+    font-size: 1.25rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    background: $primary;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 40px;
+    }
+  }
+
+  &:hover {
+    color: $primary;
+
+    &::after {
+      right: 40px;
+      width: calc(100% - 40px);
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        right: 50px;
+        width: calc(100% - 50px);
+      }
+    }
+  }
+}
+
+.more-details {
+  font-size: .875rem;
+  font-family: $headings-font-family;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $light;
+  }
+}
+
+
+.map-mask {
+  @extend %pos;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary;
+  font-size: 1.125rem;
+  font-family: $headings-font-family;
+  background: rgba($dark, .5);
+  cursor: pointer;
+  z-index: 3;
+  opacity: 1;
+  transition: .4s;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    font-size: $h3-font-size;
+  }
+
+
+  &.is-disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.command-card {
+  position: relative;
+  margin: 0 0 20px;
+
+  .image {
+    @extend %img;
+    padding-bottom: 70%;
+  }
+
+  .content {
+    padding: 20px 15px;
+    text-align: center;
+
+    .name {
+      margin-bottom: 5px;
+    }
+
+    .position {
+      font-size: .875rem;
+      color: $light;
+    }
+  }
+}

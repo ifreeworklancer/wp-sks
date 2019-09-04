@@ -1,0 +1,14 @@
+#app-footer {
+  padding: 15px 0;
+  background: $dark;
+
+  .footer-item {
+    font-size: .75rem;
+    color: $light;
+
+    a {
+      color: $primary;
+      border-bottom: 1px solid $primary;
+    }
+  }
+}

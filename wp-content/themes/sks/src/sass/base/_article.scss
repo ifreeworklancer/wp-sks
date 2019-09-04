@@ -1,0 +1,207 @@
+.article-card {
+  position: relative;
+  margin-bottom: 80px;
+  font-family: $font-family-base;
+
+  .image {
+    @extend %img;
+    position: relative;
+    padding-bottom: 70%;
+    filter: grayscale(1);
+    transition: .5s;
+
+    .date {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      background: $secondary;
+      color: $light;
+      font-size: .75rem;
+      padding: 3px 6px;
+    }
+  }
+
+  .content {
+    padding: 20px 30px;
+
+    .title {
+      font-family: $headings-font-family;
+      transition: .5s;
+    }
+
+    .description {
+      font-size: .785rem;
+      color: $light;
+    }
+  }
+
+  &:hover {
+
+    .image {
+      filter: grayscale(0);
+    }
+
+    .title {
+      color: $primary;
+    }
+  }
+}
+
+.article-wrapper {
+
+  .article-slider {
+
+    .slider-arrow {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        left: 30px;
+        right: 30px;
+      }
+    }
+
+    figure {
+      position: relative;
+      @extend %img;
+      padding-bottom: 50%;
+    }
+
+    &--main {
+
+      .article-slider-item {
+        width: 100%;
+        padding: 3px;
+      }
+    }
+
+    &--navFor {
+      .article-slider-item {
+        width: 50%;
+        padding: 3px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          width: 33.333%;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+          width: 20%;
+        }
+
+        figure {
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            @extend %pos;
+            background: $primary;
+            opacity: 0;
+            transition: .5s;
+          }
+
+          &:hover {
+
+            &::before {
+              opacity: .5;
+            }
+          }
+        }
+
+        &.is-selected {
+
+          figure {
+
+            &::before {
+              opacity: .5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .article-content {
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        font-size: $h3-font-size;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $primary;
+      margin: 35px 0 20px;
+    }
+
+    p {
+      color: $light;
+      line-height: 150%;
+    }
+
+    a {
+      color: $primary;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-color: $primary;
+      }
+    }
+
+    ul {
+      @extend %descriptionList;
+    }
+  }
+
+  .article-footer {
+    padding: 35px 0 25px;
+    border-bottom: 2px solid $secondary;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .author {
+      font-family: $headings-font-family;
+      font-size: 1.125rem;
+      color: #494949;
+    }
+
+    .share-list {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        display: flex;
+      }
+
+      li {
+        margin-bottom: 10px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        a {
+          padding: 10px 20px;
+          color: #fff;
+
+          svg {
+            margin-left: 15px;
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
