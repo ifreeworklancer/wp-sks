@@ -17,6 +17,9 @@ $about_video_link = get_field('about_video_link', $pageID);
                             <?= $about_excerpt; ?>
                         </p>
                     </div>
+                    <div class="subtitle">
+                        как мы работаем
+                    </div>
                     <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
                         <a href="<?= get_the_permalink($pageID) ?>" class="link-more mb-4 mb-sm-0 mr-sm-4">
                             Узнать больше

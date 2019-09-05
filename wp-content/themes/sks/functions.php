@@ -107,6 +107,18 @@ function theme_customize_register($wp_customize)
         'label' => 'Первый телефон',
         'type' => 'text',
     ]);
+    $wp_customize->add_setting('phone2');
+    $wp_customize->add_control('phone2', [
+        'section' => 'contacts',
+        'label' => 'Второй телефон',
+        'type' => 'text',
+    ]);
+    $wp_customize->add_setting('phone3');
+    $wp_customize->add_control('phone3', [
+        'section' => 'contacts',
+        'label' => 'Третий телефон',
+        'type' => 'text',
+    ]);
     $wp_customize->add_setting('address');
     $wp_customize->add_control('address', [
         'section' => 'contacts',

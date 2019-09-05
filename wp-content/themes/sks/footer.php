@@ -1,5 +1,8 @@
 <?php
 $phone1 = get_theme_mod('phone1');
+$phone2 = get_theme_mod('phone2');
+$phone3 = get_theme_mod('phone3');
+$email = get_theme_mod('email');
 $facebook = get_theme_mod('facebook');
 $instagram = get_theme_mod('instagram');
 $map_lat = get_theme_mod('map_lat');
@@ -21,11 +24,23 @@ $address = get_theme_mod('address');
                     <ul class="contacts-list">
                         <li class="contacts-list-item">
                             <div class="contacts-list-item__title">
-                                телефон
+                                телефоны
                             </div>
-                            <a href="tel:<?= phone_link($phone1); ?>">
-                                <?= $phone1; ?>
-                            </a>
+                            <div>
+                                <a href="tel:<?= phone_link($phone1); ?>">
+                                    <?= $phone1; ?>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="tel:<?= phone_link($phone2); ?>">
+                                    <?= $phone2; ?>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="tel:<?= phone_link($phone3); ?>">
+                                    <?= $phone3; ?>
+                                </a>
+                            </div>
                         </li>
                         <li class="contacts-list-item">
                             <div class="contacts-list-item__title">
@@ -33,6 +48,14 @@ $address = get_theme_mod('address');
                             </div>
                             <a href="<?= $address_link ?>">
                                 <?= $address; ?>
+                            </a>
+                        </li>
+                        <li class="contacts-list-item">
+                            <div class="contacts-list-item__title">
+                                email
+                            </div>
+                            <a href="mailto:<?= $email; ?>">
+                                <?= $email; ?>
                             </a>
                         </li>
                         <li class="contacts-list-item">
