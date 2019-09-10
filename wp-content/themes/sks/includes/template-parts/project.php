@@ -17,7 +17,7 @@
                         <?php while ($project->have_posts()): $project->the_post();
                         $show_project_implemented = get_field('show_project_implemented');
                         ?>
-                        <?php if ($show_project_implemented) : $count++;?>
+                        <?php if ($show_project_implemented) : $count++; ?>
                             <div class="project-slider-item">
                                 <a href="<?= get_the_permalink(); ?>" class="project-card">
                                     <div class="decor-hover"></div>
@@ -66,6 +66,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-12 text-center">
+                <a href="<?= get_the_permalink(100); ?>" class="btn btn-outline-primary">
+                    смотреть все
+                </a>
             </div>
         </div>
     </div>

@@ -19,7 +19,7 @@ function packages_post_type()
     $args = [
         'label' => __('Готовые решения', 'sks'),
         'labels' => $labels,
-        'supports' => ['title', 'editor', 'custom-fields', 'thumbnail'],
+        'supports' => ['title', 'editor', 'excerpt', 'custom-fields', 'thumbnail'],
         'taxonomies' => [],
         'hierarchical' => false,
         'public' => true,

@@ -19,11 +19,15 @@
 
     .flickity-page-dots {
       position: absolute;
-      top: 0;
+      top: 70px;
       right: 5%;
       bottom: auto;
       width: auto;
       z-index: 25;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        top: 0;
+      }
 
       li {
         position: relative;

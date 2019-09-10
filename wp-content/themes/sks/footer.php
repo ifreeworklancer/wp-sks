@@ -5,6 +5,8 @@ $phone3 = get_theme_mod('phone3');
 $email = get_theme_mod('email');
 $facebook = get_theme_mod('facebook');
 $instagram = get_theme_mod('instagram');
+$behance = get_theme_mod('behance');
+$pinterest = get_theme_mod('pinterest');
 $map_lat = get_theme_mod('map_lat');
 $map_long = get_theme_mod('map_long');
 $map_icon = get_theme_mod('map_icon');
@@ -18,8 +20,7 @@ $address = get_theme_mod('address');
             <div class="col-xl-4 order-2 order-xl-1">
                 <div class="contacts-wrapper">
                     <h2 class="section-title mb-5">
-                        Контактная
-                        информация
+                        Контакты
                     </h2>
                     <ul class="contacts-list">
                         <li class="contacts-list-item">
@@ -68,9 +69,19 @@ $address = get_theme_mod('address');
                                         <use xlink:href="#facebook-icon"></use>
                                     </svg>
                                 </a>
-                                <a href="<?= $instagram; ?>">
+                                <a href="<?= $instagram; ?>" class="mr-3">
                                     <svg width="20" height="20">
                                         <use xlink:href="#instagram-icon"></use>
+                                    </svg>
+                                </a>
+                                <a href="<?= $behance; ?>" class="mr-3">
+                                    <svg width="20" height="20">
+                                        <use xlink:href="#behance-icon"></use>
+                                    </svg>
+                                </a>
+                                <a href="<?= $pinterest; ?>">
+                                    <svg width="20" height="20">
+                                        <use xlink:href="#pinterest-icon"></use>
                                     </svg>
                                 </a>
                             </div>

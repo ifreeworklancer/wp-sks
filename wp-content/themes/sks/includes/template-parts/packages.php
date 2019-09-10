@@ -1,7 +1,7 @@
 <!-- Packages -->
 <section id="packages">
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-12">
                 <h2 class="section-title text-center mb-4 mb-sm-5">
                     Готовые решения
@@ -10,7 +10,6 @@
             <?php
             $packages = new WP_Query([
                 'post_type' => 'packages',
-                'posts_per_page' => 2,
             ]);
             $count = 0;
             if ($packages->have_posts()):

@@ -2,7 +2,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    padding-left: $sidebar-width;
 
     @media (min-width: map_get($grid-breakpoints, lg)) {
         padding-left: $sidebar-md-width;

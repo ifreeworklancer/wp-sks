@@ -3,17 +3,15 @@
     <div class="intro-slider">
         <?php
         $portfolio = new WP_Query([
-            'post_type' => 'portfolio',
+            'post_type' => 'packages',
         ]);
         if ($portfolio->have_posts()):
             ?>
             <?php while ($portfolio->have_posts()): $portfolio->the_post();
             $show_project = get_field('show_project_intro');
             ?>
-            <?php if ($show_project) : ?>
-                <div class="intro-slider-item"
-                     style="background-image:url('<?= get_the_post_thumbnail_url(); ?>');"></div>
-            <?php endif; ?>
+            <div class="intro-slider-item"
+                 style="background-image:url('<?= get_the_post_thumbnail_url(); ?>');"></div>
         <?php endwhile; ?>
         <?php endif;
         wp_reset_postdata();
@@ -21,41 +19,38 @@
     </div>
     <div class="intro-slider-description">
         <?php $portfolio = new WP_Query([
-            'post_type' => 'portfolio',
+            'post_type' => 'packages',
         ]);
         if ($portfolio->have_posts()):
             ?>
             <?php while ($portfolio->have_posts()): $portfolio->the_post();
             $price_project = get_field('price_project');
-            $show_project = get_field('show_project_intro');
             ?>
-            <?php if ($show_project) : ?>
-                <div class="intro-slider-description-item">
-                    <div class="content">
-                        <h3 class="title">
-                            <?= get_the_title(); ?>
-                        </h3>
-                        <div class="description">
-                            <p>
-                                <?= get_the_excerpt(); ?>
-                            </p>
-                        </div>
-                        <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
-                            <div class="price">
-                                <div class="price__text">
-                                    Цена
-                                </div>
-                                <div class="price__value">
-                                    $ <span><?= $price_project; ?></span> за м<sup>2</sup>
-                                </div>
+            <div class="intro-slider-description-item">
+                <div class="content">
+                    <h3 class="title">
+                        <?= get_the_title(); ?>
+                    </h3>
+                    <div class="description">
+                        <p>
+                            <?= get_the_excerpt(); ?>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
+                        <div class="price">
+                            <div class="price__text">
+                                Цена
                             </div>
-                            <a href="<?= get_the_permalink(); ?>" class="btn btn-outline-primary">
-                                подробнее
-                            </a>
+                            <div class="price__value">
+                                $ <span><?= $price_project; ?></span> за м<sup>2</sup>
+                            </div>
                         </div>
+                        <a href="<?= get_the_permalink(); ?>" class="btn btn-outline-primary">
+                            подробнее
+                        </a>
                     </div>
                 </div>
-            <?php endif; ?>
+            </div>
         <?php endwhile; ?>
         <?php endif;
         wp_reset_postdata();
