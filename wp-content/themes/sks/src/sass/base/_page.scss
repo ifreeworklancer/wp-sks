@@ -124,3 +124,17 @@
     }
   }
 }
+
+.page-single {
+
+  .article-content {
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      margin: 15px auto;
+      height: auto;
+    }
+  }
+}

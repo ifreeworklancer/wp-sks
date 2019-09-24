@@ -8,7 +8,7 @@ $sections = [
     'advantages',
     'project',
     'packages',
-    'reviews'
+//    'reviews'
 ];
 
 foreach ($sections as $section) {
