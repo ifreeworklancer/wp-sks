@@ -12,7 +12,7 @@ if (have_posts()) :
         <section class="page page-single">
             <div class="page-header">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="/"><?= __('[:ru]Главная[:en]Home[:]'); ?></a></li>
                     <?php if ($post_type === 'portfolio') : ?>
                         <li class="breadcrumb-item"><a
                                     href="<?= get_the_permalink(100); ?>"><?= get_the_title(100) ?></a></li>
@@ -76,10 +76,10 @@ if (have_posts()) :
                                     <?php if ($post_type !== 'post') : ?>
                                         <div class="price">
                                             <div class="price__text">
-                                                Цена
+                                                <?= __('[:ru]Цена[:en]Price[:]'); ?>
                                             </div>
                                             <div class="price__value">
-                                                $ <span><?= $price_project; ?></span> за м<sup>2</sup>
+                                                $ <span><?= $price_project; ?></span> <?= __('[:ru]за м[:en]per m[:]'); ?><sup>2</sup>
                                             </div>
                                         </div>
                                     <?php endif; ?>
@@ -90,7 +90,7 @@ if (have_posts()) :
                                         <li>
                                             <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>"
                                                class="btn btn-outline-secondary">
-                                                поделиться в
+                                                <?= __('[:ru]поделиться в[:en]share in[:]'); ?>
                                                 <svg width="20" height="20">
                                                     <use xlink:href="#facebook-icon"></use>
                                                 </svg>
@@ -103,7 +103,7 @@ if (have_posts()) :
                         <div class="col-12 text-center mt-5">
                             <?php if ($post_type === 'portfolio') : ?>
                                 <a href="<?= get_the_permalink(100); ?>" class="btn btn-outline-primary">
-                                    вернуться в <?= get_the_title(100) ?>
+                                    <?= __('[:ru]вернуться в[:en]return to[:]'); ?> <?= get_the_title(100) ?>
                                 </a>
                             <?php elseif ($post_type === 'packages') : ?>
                                 <a href="<?= get_the_permalink(140); ?>" class="btn btn-outline-primary">
@@ -111,7 +111,7 @@ if (have_posts()) :
                                 </a>
                             <?php elseif ($post_type === 'post') : ?>
                                 <a href="<?= get_the_permalink(111); ?>" class="btn btn-outline-primary">
-                                    вернуться в <?= get_the_title(111) ?>
+                                    <?= __('[:ru]вернуться в[:en]return to[:]'); ?> <?= get_the_title(111) ?>
                                 </a>
                             <?php endif; ?>
                         </div>

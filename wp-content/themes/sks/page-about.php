@@ -11,7 +11,7 @@ if (have_posts()) :
         <section class="page page-single">
             <div class="page-header">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="/"><?= __('[:ru]Главная[:en]Home[:]'); ?></a></li>
                     <li class="breadcrumb-item active"><?= get_the_title(); ?></li>
                 </ol>
             </div>
@@ -31,7 +31,7 @@ if (have_posts()) :
                                         <li>
                                             <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>"
                                                class="btn btn-outline-secondary">
-                                                поделиться в
+                                                <?= __('[:ru]поделиться в[:en]share in[:]'); ?>
                                                 <svg width="20" height="20">
                                                     <use xlink:href="#facebook-icon"></use>
                                                 </svg>
@@ -43,7 +43,7 @@ if (have_posts()) :
                         </div>
                         <div class="col-12 text-center mt-5">
                             <a href="/" class="btn btn-outline-primary">
-                                вернуться на главную
+                                <?= __('[:ru]вернуться на главную[:en]back to the main page[:]'); ?>
                             </a>
                         </div>
                     </div>

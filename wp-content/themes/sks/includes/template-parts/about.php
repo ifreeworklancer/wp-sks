@@ -18,16 +18,16 @@ $about_video_link = get_field('about_video_link', $pageID);
                         </p>
                     </div>
                     <div class="subtitle">
-                        как мы работаем
+                        <?= __('[:ru]как мы работаем[:en]how we are working[:]'); ?>
                     </div>
                     <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
                         <a href="<?= get_the_permalink($pageID) ?>" class="link-more mb-4 mb-sm-0 mr-sm-4">
-                            Узнать больше
+                            <?= __('[:ru]Узнать больше[:en]To learn more[:]'); ?>
                         </a>
                         <a href="#" class="btn btn-outline-primary btn-watch"
                            data-src="<?= getVideoLinkAttribute($about_video_link); ?>">
                             <div class="icon"></div>
-                            смотреть видео
+                            <?= __('[:ru]смотреть видео[:en]watch the video[:]'); ?>
                         </a>
                     </div>
                 </div>

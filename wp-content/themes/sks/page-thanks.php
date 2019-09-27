@@ -12,13 +12,13 @@ get_header();
                 <div class="col">
                     <div class="page-secondary-item">
                         <h1 class="title">
-                            Спасибо!
+                            <?= __('[:ru]Спасибо![:en]Thank![:]'); ?>
                         </h1>
                         <div class="page-subtitle">
-                            наш менеджер с вами свяжеться
+                            <?= __('[:ru]наш менеджер с вами свяжеться[:en]our manager will contact you[:]'); ?>
                         </div>
                         <a href="/" class="btn btn-outline-primary">
-                            На главную
+                            <?= __('[:ru]На главную[:en]To the main[:]'); ?>
                         </a>
                     </div>
                 </div>

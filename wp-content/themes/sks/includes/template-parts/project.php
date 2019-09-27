@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="section-title text-center mb-5">
-                    Реализованные проекты
+                    <?= __('[:ru]Реализованные проекты[:en]Completed projects[:]'); ?>
                 </h2>
                 <div class="project-slider simple-slider">
                     <?php
@@ -42,7 +42,7 @@
                                                 <?= get_the_excerpt(); ?>
                                             </p>
                                             <div class="link-more">
-                                                Узнать больше
+                                                <?= __('[:ru]Узнать больше[:en]To learn more[:]'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-12 text-center">
                 <a href="<?= get_the_permalink(100); ?>" class="btn btn-outline-primary">
-                    смотреть все
+                    <?= __('[:ru]смотреть все[:en]see all[:]'); ?>
                 </a>
             </div>
         </div>

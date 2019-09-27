@@ -20,12 +20,12 @@ $address = get_theme_mod('address');
             <div class="col-xl-4 order-2 order-xl-1">
                 <div class="contacts-wrapper">
                     <h2 class="section-title mb-5">
-                        Контакты
+                        <?= __('[:ru]Контакты[:en]Contacts[:]'); ?>
                     </h2>
                     <ul class="contacts-list">
                         <li class="contacts-list-item">
                             <div class="contacts-list-item__title">
-                                телефоны
+                                <?= __('[:ru]телефоны[:en]telephones[:]'); ?>
                             </div>
                             <div>
                                 <a href="tel:<?= phone_link($phone1); ?>">
@@ -45,7 +45,7 @@ $address = get_theme_mod('address');
                         </li>
                         <li class="contacts-list-item">
                             <div class="contacts-list-item__title">
-                                адрес
+                                <?= __('[:ru]адрес[:en]address[:]'); ?>
                             </div>
                             <a href="<?= $address_link ?>">
                                 <?= $address; ?>
@@ -61,7 +61,7 @@ $address = get_theme_mod('address');
                         </li>
                         <li class="contacts-list-item">
                             <div class="contacts-list-item__title">
-                                Мы в соц.сетях
+                                <?= __('[:ru]Мы в соц.сетях[:en]We are in social networks[:]'); ?>
                             </div>
                             <div class="d-flex align-items-center">
                                 <a href="<?= $facebook; ?>" class="mr-3">
@@ -97,7 +97,7 @@ $address = get_theme_mod('address');
             <div class="col-xl-8 order-1 order-xl-2">
                 <div class="map-contacts">
                     <div class="map-mask">
-                        Нажмите для использования карты
+                        <?= __('[:ru]Нажмите для использования карты[:en]Click to use map[:]'); ?>
                     </div>
                     <div id="contacts-map" data-long="<?= $map_long ?>" data-lat="<?= $map_lat; ?>"
                          data-icon="<?= $map_icon; ?>"></div>
@@ -123,7 +123,7 @@ $address = get_theme_mod('address');
             </div>
             <div class="col-auto">
                 <div class="footer-item">
-                    Дизайн и вебразработка студией <a href="https://impressionbureau.pro/" target="_blank">Impression
+                    <?= __('[:ru]Дизайн и вебразработка студией [:en]Design and web development by studio[:]'); ?> <a href="https://impressionbureau.pro/" target="_blank">Impression
                         Bureau</a> 2019
                 </div>
             </div>

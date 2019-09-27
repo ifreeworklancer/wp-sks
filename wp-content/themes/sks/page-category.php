@@ -21,15 +21,18 @@ $page_subtitle = get_field('page_subtitle', $pageID);
                 </div>
             </figure>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/"><?= __('[:ru]Главная[:en]Home[:]'); ?></a></li>
                 <li class="breadcrumb-item active"><?= get_the_title($pageID); ?></li>
             </ol>
         </div>
         <div class="page-body">
             <?php if ($pageID === 100) : ?>
-                <portfolios category="portfolio"></portfolios>
+                <portfolios category="portfolio"
+                            button-text="<?= __('[:ru]показать еще[:en]show more[:]'); ?>"
+                            button-more-info="<?= __('[:ru]Узнать больше[:en]To learn more[:]'); ?>"></portfolios>
             <?php elseif ($pageID === 111) : ?>
-                <posts category="post"></posts>
+                <posts category="post"
+                       button-text="<?= __('[:ru]показать еще[:en]show more[:]'); ?>"></posts>
             <?php elseif ($pageID === 140) : ?>
                 <div class="container-fluid">
                     <div class="row">
@@ -63,10 +66,10 @@ $page_subtitle = get_field('page_subtitle', $pageID);
                                             </h4>
                                             <div class="price">
                                                 <div class="price__text">
-                                                    Цена
+                                                    <?= __('[:ru]Цена[:en]Price[:]'); ?>
                                                 </div>
                                                 <div class="price__value">
-                                                    $ <span><?= $price_project; ?></span> за м<sup>2</sup>
+                                                    $ <span><?= $price_project; ?></span> <?= __('[:ru]за м[:en]per m[:]'); ?><sup>2</sup>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,7 +78,7 @@ $page_subtitle = get_field('page_subtitle', $pageID);
                                                 <?= $packages_description; ?>
                                             </div>
                                             <div class="more-details">
-                                                Подробнее
+                                                <?= __('[:ru]Подробнее[:en]More details[:]'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -87,7 +90,7 @@ $page_subtitle = get_field('page_subtitle', $pageID);
                         ?>
                         <div class="col-12 text-center mt-5">
                             <a href="<?= get_the_permalink(100); ?>" class="btn btn-outline-primary">
-                                посмотреть наши работы
+                                <?= __('[:ru]посмотреть наши работы[:en]see our work[:]'); ?>
                             </a>
                         </div>
                     </div>
@@ -128,7 +131,7 @@ $page_subtitle = get_field('page_subtitle', $pageID);
                         ?>
                         <div class="col-12 text-center mt-5">
                             <a href="<?= get_the_permalink(100); ?>" class="btn btn-outline-primary">
-                                посмотреть наши работы
+                                <?= __('[:ru]посмотреть наши работы[:en]see our work[:]'); ?>
                             </a>
                         </div>
                     </div>

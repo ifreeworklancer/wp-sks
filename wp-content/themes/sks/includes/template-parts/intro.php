@@ -39,14 +39,14 @@
                     <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
                         <div class="price">
                             <div class="price__text">
-                                Цена
+                                <?= __('[:ru]Цена[:en]Price[:]'); ?>
                             </div>
                             <div class="price__value">
-                                $ <span><?= $price_project; ?></span> за м<sup>2</sup>
+                                $ <span><?= $price_project; ?></span> <?= __('[:ru]за м[:en]per m[:]'); ?><sup>2</sup>
                             </div>
                         </div>
                         <a href="<?= get_the_permalink(); ?>" class="btn btn-outline-primary">
-                            подробнее
+                            <?= __('[:ru]подробнее[:en]more details[:]'); ?>
                         </a>
                     </div>
                 </div>

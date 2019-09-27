@@ -16,7 +16,7 @@
                     </h4>
                     <p v-if="post.excerpt !== ''">{{ post.excerpt }}</p>
                     <div class="link-more">
-                        Узнать больше
+                        {{buttonMoreInfo}}
                     </div>
                 </div>
             </div>
@@ -28,7 +28,8 @@
     export default {
         props: {
             post: Object,
-            count: Number
+            count: Number,
+            buttonMoreInfo: String
         },
         computed: {
             image() {

@@ -7,13 +7,13 @@ get_header('secondary');
                 <div class="col">
                     <div class="page-secondary-item">
                         <h1 class="title">
-                            Ууупс!
+                            <?= __('[:ru]Ууупс![:en]Ooops![:]'); ?>
                         </h1>
                         <div class="page-subtitle">
-                            такой страницы не существует
+                            <?= __('[:ru]такой страницы не существует[:en]such page does not exist[:]'); ?>
                         </div>
                         <a href="/" class="btn btn-outline-primary">
-                            На главную
+                            <?= __('[:ru]На главную[:en]To the main[:]'); ?>
                         </a>
                     </div>
                 </div>

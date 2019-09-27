@@ -127,6 +127,33 @@
       }
     }
   }
+
+  .wpm-language-switcher {
+    max-width: 115px;
+    margin: 0 auto;
+
+    li {
+      margin-bottom: 15px;
+
+      &.active {
+
+        span {
+          color: $primary;
+        }
+      }
+
+      span {
+        color: #fff;
+        font-family: $headings-font-family;
+
+        transition: .5s;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
 }
 
 .site-copyrighting {

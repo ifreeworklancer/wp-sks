@@ -5,7 +5,7 @@
     </div>
     <div class="custom-modal-header">
         <h2 class="title">
-            Свяжитесь с нами
+            <?= __('[:ru]Свяжитесь с нами[:en]Contact us[:]'); ?>
         </h2>
     </div>
     <div class="custom-modal-body">

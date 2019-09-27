@@ -1,10 +1,12 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <portfolio v-if="posts.length" v-for="(post, index) in posts" :post="post" :count="index + 1" :key="post.id"/>
+            <portfolio v-if="posts.length" v-for="(post, index) in posts" :post="post" :count="index + 1"
+                       :buttonMoreInfo="buttonMoreInfo"
+                       :key="post.id"/>
             <div class="col-12 text-center mt-5" v-if="paged">
                 <a href="#" class="btn btn-outline-primary" @click.prevent="getPosts">
-                    показать еще
+                    {{buttonText}}
                 </a>
             </div>
         </div>
@@ -19,6 +21,8 @@
         props: {
             category: String,
             filters: String,
+            buttonText: String,
+            buttonMoreInfo: String,
         },
         components: {
             Portfolio

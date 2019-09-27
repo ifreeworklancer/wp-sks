@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="section-title text-center mb-4 mb-sm-5">
-                    Готовые решения
+                    <?= __('[:ru]Готовые решения[:en]Ready-made solutions[:]'); ?>
                 </h2>
             </div>
             <?php
@@ -34,10 +34,10 @@
                                 </h4>
                                 <div class="price">
                                     <div class="price__text">
-                                        Цена
+                                        <?= __('[:ru]Цена[:en]Price[:]'); ?>
                                     </div>
                                     <div class="price__value">
-                                        $ <span><?= $price_project; ?></span> за м<sup>2</sup>
+                                        $ <span><?= $price_project; ?></span> <?= __('[:ru]за м[:en]per m[:]'); ?><sup>2</sup>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                     <?= $packages_description; ?>
                                 </div>
                                 <div class="more-details">
-                                    Подробнее
+                                    <?= __('[:ru]подробнее[:en]more details[:]'); ?>
                                 </div>
                             </div>
                         </div>

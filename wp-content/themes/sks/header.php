@@ -21,7 +21,7 @@ $address = get_theme_mod('address');
     <ul class="contacts-list contacts-list--row">
         <li class="contacts-list-item">
             <div class="contacts-list-item__title">
-                телефон
+                <?= __('[:ru]телефон[:en]phone[:]'); ?>
             </div>
             <a href="tel:<?= phone_link($phone1); ?>">
                 <?= $phone1; ?>
@@ -29,7 +29,7 @@ $address = get_theme_mod('address');
         </li>
         <li class="contacts-list-item">
             <div class="contacts-list-item__title">
-                адрес
+                <?= __('[:ru]адрес[:en]address[:]'); ?>
             </div>
             <a href="<?= $address_link ?>">
                 <?= $address; ?>
@@ -48,21 +48,25 @@ $address = get_theme_mod('address');
     <div class="sidebar-item d-none d-lg-block">
         <nav class="header-nav">
             <?php wp_nav_menu([
-                'theme_location'  => '',
-                'menu'            => '',
-                'container'       => '',
+                'theme_location' => '',
+                'menu' => '',
+                'container' => '',
                 'container_class' => '',
-                'container_id'    => '',
-                'menu_class'      => '',
-                'menu_id'         => '',
-                'echo'            => true,
-                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+                'container_id' => '',
+                'menu_class' => '',
+                'menu_id' => '',
+                'echo' => true,
+                'items_wrap' => '<ul class="%2$s">%3$s</ul>',
             ]); ?>
         </nav>
     </div>
     <div class="sidebar-item d-none d-lg-block text-center">
+        <?php
+        if (function_exists('wpm_language_switcher'))
+            wpm_language_switcher('list', 'name');
+        ?>
         <a href="#" class="btn btn-outline-primary open-feedback">
-            связаться
+            <?= __('[:ru]связаться[:en]contact[:]'); ?>
         </a>
         <div class="site-copyrighting">
             Copyright © <?= date('Y'); ?> All Right Reserve
@@ -71,7 +75,7 @@ $address = get_theme_mod('address');
 
     <div class="burger-menu">
         <div class="burger-menu__text">
-            Меню
+            <?= __('[:ru]Меню[:en]Menu[:]'); ?>
         </div>
         <div class="burger-menu-icon">
             <div class="line line--top"></div>
@@ -83,20 +87,24 @@ $address = get_theme_mod('address');
     <div class="menu">
         <nav class="menu-nav">
             <?php wp_nav_menu([
-                'theme_location'  => '',
-                'menu'            => '',
-                'container'       => '',
+                'theme_location' => '',
+                'menu' => '',
+                'container' => '',
                 'container_class' => '',
-                'container_id'    => '',
-                'menu_class'      => '',
-                'menu_id'         => '',
-                'echo'            => true,
-                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+                'container_id' => '',
+                'menu_class' => '',
+                'menu_id' => '',
+                'echo' => true,
+                'items_wrap' => '<ul class="%2$s">%3$s</ul>',
             ]); ?>
         </nav>
         <div class="text-center">
+            <?php
+            if (function_exists('wpm_language_switcher'))
+                wpm_language_switcher('list', 'name');
+            ?>
             <a href="#" class="btn btn-outline-primary open-feedback">
-                связаться
+                <?= __('[:ru]связаться[:en]contact[:]'); ?>
             </a>
             <div class="site-copyrighting">
                 Copyright © <?= date('Y'); ?> All Right Reserve

@@ -7,6 +7,7 @@ function theme_setup()
     register_nav_menus(
         [
             'main_menu' => 'Главное меню',
+//            'language_menu' => 'Языковое меню',
         ]
     );
 }
