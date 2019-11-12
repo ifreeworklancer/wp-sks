@@ -87,11 +87,6 @@ $address = get_theme_mod('address');
                             </div>
                         </li>
                     </ul>
-                    <div class="contacts-logo">
-                        <svg width="225" height="90" class="ml-auto">
-                            <use xlink:href="#contacts-logo"></use>
-                        </svg>
-                    </div>
                 </div>
             </div>
             <div class="col-xl-8 order-1 order-xl-2">

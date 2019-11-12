@@ -7,7 +7,6 @@ function theme_setup()
     register_nav_menus(
         [
             'main_menu' => 'Главное меню',
-//            'language_menu' => 'Языковое меню',
         ]
     );
 }
@@ -177,7 +176,9 @@ add_action('customize_register', 'theme_customize_register');
 function get_ajax_posts()
 {
     $args = [
-        'posts_per_page' => 6,
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order'   => 'ASC',
         'paged' => $_POST['paged'],
     ];
     if (isset($_POST)) {

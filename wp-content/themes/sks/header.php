@@ -12,6 +12,7 @@
 
 <?php
 $phone1 = get_theme_mod('phone1');
+$phone2 = get_theme_mod('phone2');
 $address_link = get_theme_mod('address_link');
 $address = get_theme_mod('address');
 ?>
@@ -25,6 +26,9 @@ $address = get_theme_mod('address');
             </div>
             <a href="tel:<?= phone_link($phone1); ?>">
                 <?= $phone1; ?>
+            </a>
+            <a href="tel:<?= phone_link($phone2); ?>" class="ml-3">
+                <?= $phone2; ?>
             </a>
         </li>
         <li class="contacts-list-item">
