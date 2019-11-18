@@ -19,27 +19,33 @@ $address = get_theme_mod('address');
 
 <!-- App-header -->
 <header id="app-header">
-    <ul class="contacts-list contacts-list--row">
-        <li class="contacts-list-item">
-            <div class="contacts-list-item__title">
-                <?= __('[:ru]телефон[:en]phone[:]'); ?>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <ul class="contacts-list contacts-list--row">
+                    <li class="contacts-list-item">
+                        <div class="contacts-list-item__title">
+                            <?= __('[:ru]телефон[:en]phone[:]'); ?>
+                        </div>
+                        <a href="tel:<?= phone_link($phone1); ?>">
+                            <?= $phone1; ?>
+                        </a>
+                        <a href="tel:<?= phone_link($phone2); ?>" class="ml-3">
+                            <?= $phone2; ?>
+                        </a>
+                    </li>
+                    <li class="contacts-list-item">
+                        <div class="contacts-list-item__title">
+                            <?= __('[:ru]адрес[:en]address[:]'); ?>
+                        </div>
+                        <a href="<?= $address_link ?>">
+                            <?= $address; ?>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <a href="tel:<?= phone_link($phone1); ?>">
-                <?= $phone1; ?>
-            </a>
-            <a href="tel:<?= phone_link($phone2); ?>" class="ml-3">
-                <?= $phone2; ?>
-            </a>
-        </li>
-        <li class="contacts-list-item">
-            <div class="contacts-list-item__title">
-                <?= __('[:ru]адрес[:en]address[:]'); ?>
-            </div>
-            <a href="<?= $address_link ?>">
-                <?= $address; ?>
-            </a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </header>
 
 <!-- App-sidebar -->
@@ -49,7 +55,7 @@ $address = get_theme_mod('address');
             <img src="<?= get_theme_file_uri('images/icons/logo.png') ?>" alt="logo">
         </a>
     </div>
-    <div class="sidebar-item d-none d-lg-block">
+    <div class="sidebar-item d-none">
         <nav class="header-nav">
             <?php wp_nav_menu([
                 'theme_location' => '',
@@ -64,7 +70,7 @@ $address = get_theme_mod('address');
             ]); ?>
         </nav>
     </div>
-    <div class="sidebar-item d-none d-lg-block text-center">
+    <div class="sidebar-item d-none text-center">
         <?php
         if (function_exists('wpm_language_switcher'))
             wpm_language_switcher('list', 'name');

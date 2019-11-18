@@ -11,12 +11,12 @@
   box-shadow: 0 0 30px rgba(#000, 0.3);
   z-index: 200;
 
-  @media (min-width: map_get($grid-breakpoints, lg)) {
-    flex-direction: column;
-    padding: 4% 0 15px;
-    width: $sidebar-md-width;
-    bottom: 0;
-  }
+  //@media (min-width: map_get($grid-breakpoints, lg)) {
+  //  flex-direction: column;
+  //  padding: 4% 0 15px;
+  //  width: $sidebar-md-width;
+  //  bottom: 0;
+  //}
 
   .sidebar-item {
     position: relative;
@@ -27,10 +27,10 @@
 
     img {
       width: 100%;
-      max-width: 20px;
+      max-width: 40px;
 
       @media (min-width: map_get($grid-breakpoints, lg)) {
-        max-width: 130px;
+        max-width: 70px;
       }
     }
   }
@@ -53,9 +53,9 @@
     cursor: pointer;
     z-index: 100;
 
-    @media (min-width: map_get($grid-breakpoints, lg)) {
-      display: none;
-    }
+    //@media (min-width: map_get($grid-breakpoints, lg)) {
+    //  display: none;
+    //}
 
     &.active {
 
@@ -101,7 +101,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20% 15px 15px;
+    padding: 10% 15px 15px;
     transform: translateY(-100%);
     background: $dark;
     display: flex;

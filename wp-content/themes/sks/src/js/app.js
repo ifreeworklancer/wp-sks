@@ -32,6 +32,11 @@ new Vue({
         $(menu).toggleClass('active');
     });
 
+    $(window).on('scroll',function () {
+        $(burgerMenu).removeClass('active');
+        $(menu).removeClass('active');
+    });
+
     /**
      * Scroll
      */
